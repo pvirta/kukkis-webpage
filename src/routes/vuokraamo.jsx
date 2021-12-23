@@ -1,5 +1,5 @@
-import {Breadcrumb, Space, Table} from "antd";
-import {Link} from "react-router-dom";
+import {Breadcrumb, notification, Space, Table} from "antd";
+import {Link, useSearchParams} from "react-router-dom";
 import {HomeOutlined} from "@ant-design/icons";
 
 export default function Vuokraamo() {
@@ -46,7 +46,7 @@ export default function Vuokraamo() {
         },
         {
             key: '6',
-            aika: 'Päivä 11-18',
+            aika: 'Päivä 10-18 (12-20)',
             hinta: '24,00 €'
         },
         {
@@ -67,12 +67,12 @@ export default function Vuokraamo() {
         {
             key: '10',
             aika: '1 Tunti',
-            hinta: '2,00 €'
+            hinta: '3,00 €'
         },
         {
             key: '11',
             aika: '2 Tuntia',
-            hinta: '2,00 €'
+            hinta: '4,00 €'
         },
         {
             key: '10',
@@ -102,10 +102,43 @@ export default function Vuokraamo() {
         {
             key: '8',
             aika: <h3>Sauvat</h3>,
-            hinta: '3,00 €'
+            hinta: '2,00 €'
         },
 
     ]
+
+    const [searchParams, setSearchParams] =useSearchParams()
+
+    const q = searchParams.get('tunti')
+
+    const openNotificationTunti = () => {
+        const args = {
+            message: 'Tunti ostettu',
+            description:
+                'Antamaasi sähköpostiin on lähetty tietot ostetusta hiihtotunnista',
+            duration: 0,
+        };
+        notification.open(args);
+    }
+
+    let done = false
+    const openNotification = () => {
+        const args = {
+            message: 'Notification Title',
+            description:
+                'I will never close automatically. This is a purposely very very long description that has many many characters and words.',
+            duration: 0,
+        };
+        if (!done) {
+            notification.open(args);
+        }
+        done = true
+    };
+
+    if (q) {
+        openNotificationTunti()
+        console.log(q)
+    }
 
     window.scrollTo(0, 0)
 
@@ -118,7 +151,7 @@ export default function Vuokraamo() {
                 <Breadcrumb.Item>Vuokraamo</Breadcrumb.Item>
             </Breadcrumb>
             <Table columns={columns} pagination={{defaultPageSize: 100, position: ['none', 'none'] }} dataSource={data} />
-            <p style={{ padding: "1rem 1rem" }}>Meillä käy käteinen, pankki- ja luottokortti sekä Smartum</p>
+            <p style={{ padding: "1rem 1rem" }}>Meillä käy käteinen, pankki- ja luottokortti sekä Smartum ja Epassi. Täältä voi lukea <a href={'https://www.ski.fi/info/sopimusehdot/valinevuokraamojen-sopimusehdot/'}>Sopimusehdot.</a></p>
         </main>
     );
 }

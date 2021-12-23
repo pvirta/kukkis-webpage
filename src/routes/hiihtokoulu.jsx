@@ -1,4 +1,4 @@
-import {Breadcrumb, Table} from "antd";
+import {Breadcrumb, Button, Table} from "antd";
 import {Link} from "react-router-dom";
 import {HomeOutlined} from "@ant-design/icons";
 
@@ -43,7 +43,10 @@ export default function Hiihtokoulu() {
             </Breadcrumb>
             <h2 style={{ padding: "0 1rem" }}>HIIHTOKOULU KUKKIS</h2>
             <h3 style={{ padding: "1rem 1rem" }}>Hiihtokoulu Kukkiksen koulutetut opettajat tarjoavat opetusta lasketteluun, lautailuun ja telemarkkiin.</h3>
+
             <Table dataSource={data} columns={columns} pagination={{ position: ['none', 'none'] }} />
+
+            <Link style={{ padding: "2rem 1rem", position: 'relative', top: 20 }} to={'/ostatunti'}><Button size={'large'} type={'primary'}>Osta tunti</Button></Link>
         </main>
     );
 }

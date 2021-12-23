@@ -116,12 +116,13 @@ export default function Vuokraamo() {
                 <Breadcrumb.Item>Hissiliput</Breadcrumb.Item>
             </Breadcrumb>
             <h1>Hissiliput</h1>
+            <a href='https://snowcard.fi/v/#/ruosniemi/350'><Button>Osta ja lataa hissilippu</Button></a>
             <Table columns={columns} pagination={{ position: ['none', 'none'] }} dataSource={data} />
             <h3 style={{ padding: "1rem" }}>SnowCard, etäluettava älykortti 5€</h3>
-            <p style={{ padding: "0 1rem" }}>Alle 7v. kypäräpäät ilmaiseksi, SnowCard tarvitaan </p>
+            <p style={{ padding: "0 1rem" }}>Alle 7v. "kypäräpäät" maksavan aikuisen kanssa ilmaiseksi, molemmilla SnowCard </p>
             <h2 style={{ padding: "0 1rem" }}>Taikamatto kaikille ilmainen</h2>
             <Table columns={columns2} pagination={{ position: ['none', 'none'] }} dataSource={data2} />
-            <p style={{ padding: "1rem 1rem" }}>Meillä käy käteinen, pankki- ja luottokortti sekä Smartum</p>
+            <p style={{ padding: "1rem 1rem" }}>Meillä käy käteinen, pankki- ja luottokortti sekä Smartum ja Epassi. Täältä voi lukea <a href={'https://www.ski.fi/info/sopimusehdot/hiihtokeskuspalveluiden-sopimusehdot/'}>Sopimusehdot.</a></p>
 
         </main>
     );
