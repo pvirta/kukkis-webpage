@@ -70,7 +70,8 @@ const OstaTunti = () => {
     const formItemLayout = {
         labelCol: {
             xs: {
-                span: 24,
+                span: 20,
+                offset: 2,
             },
             sm: {
                 span: 8,
@@ -78,7 +79,8 @@ const OstaTunti = () => {
         },
         wrapperCol: {
             xs: {
-                span: 24,
+                span: 20,
+                offset: 2,
             },
             sm: {
                 span: 14,
@@ -757,7 +759,7 @@ const OstaTunti = () => {
                                 style={{margin: 20}}>
                                 <Row>
                                     <Col>
-                                        {(valine === 0 ? 'Hiihtotunti suksille - ' : '') + (valine === 1 ? 'Hiihtotunti laudalle - ' : '') + (moment(tunti).format("dddd, Do MMMM [klo:] HH:mm"))}
+                                        {(valine === 0 ? 'Hiihtotunti suksille - ' : '') + (valine === 1 ? 'Hiihtotunti laudalle - ' : '') + (moment(tunti).format("dddd, Do MMMM [klo:] HH:mm")) + " (50 min)"}
                                     </Col>
                                 </Row>
                                 <Row gutter={[16, 24]} style={{marginBottom: 35}}>
@@ -893,6 +895,7 @@ const OstaTunti = () => {
                                     </Button>
                                     <Button htmlType="button" onClick={() => {
                                         setVarausnnumero(null);
+                                        vapauta()
                                         onSelectTunti(moment());
                                         onSelectLauta(moment());
                                         setFormValues({})

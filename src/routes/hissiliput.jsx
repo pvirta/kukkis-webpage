@@ -122,7 +122,7 @@ export default function Vuokraamo() {
             <p style={{ padding: "0 1rem" }}>Alle 7v. "kypäräpäät" maksavan aikuisen kanssa ilmaiseksi, molemmilla SnowCard </p>
             <h2 style={{ padding: "0 1rem" }}>Taikamatto kaikille ilmainen</h2>
             <Table columns={columns2} pagination={{ position: ['none', 'none'] }} dataSource={data2} />
-            <p style={{ padding: "1rem 1rem" }}>Meillä käy käteinen, pankki- ja luottokortti sekä Smartum ja Epassi. Täältä voi lukea <a href={'https://www.ski.fi/info/sopimusehdot/hiihtokeskuspalveluiden-sopimusehdot/'}>Sopimusehdot.</a></p>
+            <p style={{ padding: "1rem 1rem" }}>Aktivoitu lippu tulee käyttää saman kauden aikana. Meillä käy käteinen, pankki- ja luottokortti sekä Smartum ja Epassi. Täältä voi lukea <a href={'https://www.ski.fi/info/sopimusehdot/hiihtokeskuspalveluiden-sopimusehdot/'}>Sopimusehdot.</a></p>
 
         </main>
     );

@@ -12,6 +12,8 @@ import OstaTunti from "./routes/OstaTunti";
 import Tilausvahvistus from "./routes/Tilausvahvistus";
 import KaupanEhdot from "./routes/KaupanEhdot";
 import Huolto from "./routes/Huolto";
+import Kurssit from "./routes/Kurssit";
+import Tilausvahvistuskurssi from "./routes/Tilausvahvistuskurssi";
 
 const rootElement = document.getElementById("root");
 render(
@@ -21,9 +23,12 @@ render(
             <Route path="vuokraamo" element={<Vuokraamo />} />
             <Route path="hissiliput" element={<Hissiliput />} />
             <Route path="hiihtokoulu" element={<Hiihtokoulu />} />
-            <Route path="ostatunti" element={<Huolto />} />
+            <Route path="ostatunti" element={<OstaTunti />} />
             <Route path="tilausvahvistus" element={<Tilausvahvistus />} />
             <Route path="kaupanehdot" element={<KaupanEhdot />} />
+            <Route path="kurssit" element={<Kurssit />} />
+            <Route path="tilausvahvistuskurssi" element={<Tilausvahvistuskurssi />} />
+            tilausvahvistuskurssi
         </Routes>
     </BrowserRouter>,
     rootElement

@@ -81,9 +81,7 @@ export default function App() {
                     <Col xs={{span: 24, order: 1}} sm={{span: 24, order: 1}} md={{span: 24, order: 1}}
                          lg={{span: 12, order: 1}} xl={{span: 8, order: 1}}>
                         <div className={"pad"} style={{textAlign: 'center'}}>
-                            <h1 style={{fontSize: 40}}>Joulunajan aukiolot</h1>
-                            <p className={"basic-text"}>23.-25.12. suljettuna</p>
-                            <p className={"basic-text"}>26.12. klo 10-18</p>
+                            <h1 style={{fontSize: 40}}>Joulun ja uudenvuoden aukiolot</h1>
                             <p className={"basic-text"}>27.-30.12. klo 12-20</p>
                             <p className={"basic-text"}>31.12-2.1. klo 10-18</p>
                             <p className={"basic-text"}>3.1.-5.1. klo 12-20</p>
@@ -96,9 +94,11 @@ export default function App() {
                     <Col xs={{span: 24, order: 2}} sm={{span: 24, order: 2}} md={{span: 24, order: 2}}
                          lg={{span: 12, order: 2}} xl={{span: 8, order: 2}}>
                         <div className={"pad"} style={{textAlign: 'center'}}>
-                            <h2 style={{color: 'red'}}>KAUSI AVATTU</h2>
-                            <h1 className={"title-text"}>Aukiolot</h1>
-                            <p className={"basic-text"}>Maanantaisin suljettu</p>
+                            <br />
+                            <p>Hiihtokeskuksen välinevuokraamossa on saattanut altistua koronavirukselle tiistaina 28.12. klo 12.30-13.00 sekä 18.00-19.00 välisinä aikoina. Näinä aikoina vuokraamossa on työskennellyt henkilö, jolla on myöhemmin todettu koronaviruksen aiheuttama tartunta. Henkilö on ollut työskennellessään täysin oireeton ja hän on käyttänyt maskia. Kehoitamme kyseisinä aikoina vuokraamossa asioineita henkilöitä tarkkailemaan tehostetusti omaa oloaan ja hakeutumaan testiin vähäistenkin oireiden ilmetessä.</p>
+                            <h2>Aukiolot</h2>
+                            {/*<h1 className={"title-text"}>Aukiolot</h1>
+                            <p className={"basic-text"}>Maanantaisin suljettu</p>*/}
                             <p className={"basic-text"}>ti-pe 17-21</p>
                             <p className={"basic-text"}>la-su 10-18</p>
                             <h2>lipunmyynti: <a href={'tel: 0413138836'}> 041-3138836</a></h2>
